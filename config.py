@@ -14,18 +14,18 @@ admins = {}
 SESSION_NAME = getenv("SESSION_NAME", "session")
 BOT_TOKEN = getenv("BOT_TOKEN")
 BOT_NAME = getenv("BOT_NAME", "Veez Music")
-BG_IMAGE = getenv("BG_IMAGE", "https://telegra.ph/file/20147c4f049e2c1f2f248.png")
-THUMB_IMG = getenv("THUMB_IMG", "https://telegra.ph/file/4c39fbb88932761913fff.png")
-AUD_IMG = getenv("AUD_IMG", "https://telegra.ph/file/73e10ed6e2bd32b478de6.png")
-QUE_IMG = getenv("QUE_IMG", "https://telegra.ph/file/b95c13eef1ebd14dbb458.png")
+BG_IMAGE = getenv("BG_IMAGE", "https://telegra.ph/file/a7c1aa11b79a17eddf844.jpg")
+THUMB_IMG = getenv("THUMB_IMG", "https://telegra.ph/file/a7c1aa11b79a17eddf844.jpg")
+AUD_IMG = getenv("AUD_IMG", "https://telegra.ph/file/a7c1aa11b79a17eddf844.jpg")
+QUE_IMG = getenv("QUE_IMG", "https://telegra.ph/file/a7c1aa11b79a17eddf844.jpg")
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
-BOT_USERNAME = getenv("BOT_USERNAME", "veezmusicbot")
-ASSISTANT_NAME = getenv("ASSISTANT_NAME", "veezassistant")
-GROUP_SUPPORT = getenv("GROUP_SUPPORT", "VeezSupportGroup")
-UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "levinachannel")
+BOT_USERNAME = getenv("BOT_USERNAME", "BAZIGARMUSICBOT")
+ASSISTANT_NAME = getenv("ASSISTANT_NAME", "BAZIGARYT")
+GROUP_SUPPORT = getenv("GROUP_SUPPORT", "CFC_BOT_SUPPORT")
+UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "noinoiop")
 # isi dengan username kamu tanpa simbol @
-OWNER_NAME = getenv("OWNER_NAME", "dlwrml")
+OWNER_NAME = getenv("OWNER_NAME", "BAZIGARYT")
 # fill with your id as the owner of the bot
 OWNER_ID = int(os.environ.get("OWNER_ID"))
 DATABASE_URL = os.environ.get("DATABASE_URL")  # fill with your mongodb url
@@ -41,6 +41,6 @@ U_BRANCH = "main"
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
 HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
 UPSTREAM_REPO = os.environ.get(
-    "UPSTREAM_REPO", "https://github.com/levina-lab/VeezMusic"
+    "UPSTREAM_REPO", "https://github.com/Bazigar1929/VeezMusic"
 )
 HEROKU_URL = fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME)
