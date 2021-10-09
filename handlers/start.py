@@ -35,37 +35,37 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>✨ **Welcome {message.from_user.mention} !** \n
-💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) allows you to play music on groups through the new Telegram's voice chats!**
+        f"""<b>✨ **𝐖𝐞𝐥𝐜𝐨𝐦𝐞 {message.from_user.mention} !** \n
+💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 𝐈𝐬 𝐌𝐚𝐝𝐞 𝐁𝐲 [𝐁𝐀𝐙𝐈𝐆𝐀𝐑](https://t.me/BazigarYT) **
 
-💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
+💡 **🍸𝐅𝐨𝐫 𝐀𝐥𝐥 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐓𝐚𝐩 𝐎𝐧 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐁𝐮𝐭𝐭𝐨𝐧 🎶✨**
 
-❔ **To know how to use this bot, please click on the » ❓ Basic Guide button!**
+❔ **𝐀𝐝𝐝 𝐁𝐨𝐭 𝐀𝐬 𝐀𝐝𝐦𝐢𝐧 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 👑📀**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕",
+                        "❰𝗔𝗗𝗗 𝗠𝗘 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣❱",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("❰𝗛𝗢𝗪 𝗧𝗢 𝗨𝗦𝗘❱", callback_data="cbhowtouse")],
                 [
-                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
-                    InlineKeyboardButton("💝 Donate", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("❰𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦❱", callback_data="cbcmds"),
+                    InlineKeyboardButton("❰𝗢𝗪𝗡𝗘𝗥❱", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "❰𝗨𝗣𝗗𝗔𝗧𝗘𝗦❱", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "❰𝗦𝗨𝗣𝗣𝗢𝗥𝗧❱", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/levina-lab/VeezMusic"
+                        "❰𝗜𝗠𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡❱", url="https://github.com/levina-lab/VeezMusic"
                     )
                 ],
             ]
@@ -82,15 +82,15 @@ async def start(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        f"""✅ **bot is running**\n<b>💠 **uptime:**</b> `{uptime}`""",
+        f"""🟢 **𝐁𝐚𝐳𝐢𝐠𝐚𝐫 𝐈𝐬 𝐋𝐢𝐯𝐞**\n<b>💠 *𝐔𝐩𝐭𝐢𝐦𝐞*:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "🟢𝐆𝐑𝐎𝐔𝐏", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🔴𝐎𝐖𝐍𝐄𝐑", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ]
             ]
@@ -103,7 +103,7 @@ async def start(client: Client, message: Message):
 )
 async def help(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>👋🏻 **Hello** {message.from_user.mention()}</b>
+        f"""<b>🟢 **𝐇𝐞𝐥𝐥𝐨** {message.from_user.mention()}</b>
 
 **Please press the button below to read the explanation and see the list of available commands !**
 
@@ -119,23 +119,23 @@ async def help(client: Client, message: Message):
 )
 async def help_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>💡 Hello {message.from_user.mention} welcome to the help menu !</b>
+        f"""<b>💡 𝐇𝐞𝐥𝐥𝐨 {message.from_user.mention} 🟢𝐇𝐞𝐥𝐥𝐨 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐂𝐨𝐦𝐦𝐚𝐧𝐝!</b>
 
-**in this menu you can open several available command menus, in each command menu there is also a brief explanation of each command**
+**𝐎𝐮𝐫 𝐁𝐨𝐭 𝐇𝐚𝐯𝐞 𝐌𝐚𝐧𝐲 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐅𝐨𝐫 𝐍𝐨𝐫𝐦𝐚𝐥 𝐔𝐬𝐞𝐫𝐬 𝐀𝐝𝐦𝐢𝐧𝐬 𝐒𝐮𝐝𝐨 𝐔𝐬𝐞𝐫𝐬 𝐚𝐧𝐝 𝐎𝐰𝐧𝐞𝐫**
 
-⚡ __Powered by {BOT_NAME} A.I__""",
+⚡ __𝐏𝐨𝐰𝐞𝐫𝐝 𝐁𝐲 𝐁𝐀𝐙𝐈𝐆𝐀𝐑 𝐁𝐎𝐓𝐒 [𝐂𝐅𝐂]__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📚 Basic Cmd", callback_data="cbbasic"),
-                    InlineKeyboardButton("📕 Advanced Cmd", callback_data="cbadvanced"),
+                    InlineKeyboardButton("❰🟡𝐁𝐀𝐒𝐈𝐂❱", callback_data="cbbasic"),
+                    InlineKeyboardButton("❰🟢𝐀𝐃𝐕𝐀𝐍𝐂𝐄❱", callback_data="cbadvanced"),
                 ],
                 [
-                    InlineKeyboardButton("📘 Admin Cmd", callback_data="cbadmin"),
-                    InlineKeyboardButton("📗 Sudo Cmd", callback_data="cbsudo"),
+                    InlineKeyboardButton("❰🔴𝐀𝐃𝐌𝐈𝐍❱", callback_data="cbadmin"),
+                    InlineKeyboardButton("❰⚪𝐒𝐔𝐃𝐎❱", callback_data="cbsudo"),
                 ],
-                [InlineKeyboardButton("📙 Owner Cmd", callback_data="cbowner")],
-                [InlineKeyboardButton("📔 Fun Cmd", callback_data="cbfun")],
+                [InlineKeyboardButton("❰⚫𝐎𝐖𝐍𝐄𝐑❱", callback_data="cbowner")],
+                [InlineKeyboardButton("❰📀𝐅𝐔𝐍 𝐂𝐌𝐃❱", callback_data="cbfun")],
             ]
         ),
     )
