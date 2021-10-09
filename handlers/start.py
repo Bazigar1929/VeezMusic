@@ -90,7 +90,7 @@ async def start(client: Client, message: Message):
                         "🟢𝐆𝐑𝐎𝐔𝐏", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "🔴𝐎𝐖𝐍𝐄𝐑", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🔴𝐎𝐖𝐍𝐄𝐑", url=f"https://t.me/{OWNER_NAME}"
                     ),
                 ]
             ]
