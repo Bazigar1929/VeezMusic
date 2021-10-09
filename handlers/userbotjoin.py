@@ -19,7 +19,7 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>• **i'm not have permission:**\n\n» ❌ __Add Users__</b>",
+            "<b>• **𝐈 𝐌 𝐍𝐨𝐭 𝐇𝐚𝐯𝐞 𝐏𝐞𝐞𝐦𝐢𝐬𝐬𝐢𝐨𝐧:**\n\n» 🔴__Add Users__</b>",
         )
         return
 
@@ -31,11 +31,11 @@ async def addchannel(client, message):
     try:
         await USER.join_chat(invitelink)
         await USER.send_message(
-            message.chat.id, "🤖: i'm joined here for playing music on voice chat"
+            message.chat.id, "👑: 𝐈'𝐦 𝐉𝐨𝐢𝐧𝐞𝐝 𝐇𝐞𝐚𝐫 𝐅𝐨𝐫 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 𝐌𝐮𝐬𝐢𝐜 𝐈𝐧 𝐕𝐂"
         )
     except UserAlreadyParticipant:
         await message.reply_text(
-            f"<b>✅ userbot already joined chat</b>",
+            f"<b>🟢𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐉𝐨𝐢𝐧𝐞𝐝</b>",
         )
     except Exception as e:
         print(e)
@@ -45,7 +45,7 @@ async def addchannel(client, message):
         )
         return
     await message.reply_text(
-        f"<b>✅ userbot successfully joined chat</b>",
+        f"<b>🟢𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐉𝐨𝐢𝐧𝐞𝐝 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩</b>",
     )
 
 
@@ -55,7 +55,7 @@ async def addchannel(client, message):
 @authorized_users_only
 async def rem(client, message):
     try:
-        await USER.send_message(message.chat.id, "✅ userbot successfully left chat")
+        await USER.send_message(message.chat.id, "🟢𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐋𝐞𝐚𝐯𝐞 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩")
         await USER.leave_chat(message.chat.id)
     except:
         await message.reply_text(
@@ -72,18 +72,18 @@ async def bye(client, message):
 
     left = 0
     failed = 0
-    lol = await message.reply("🔄 **userbot** leaving all chats !")
+    lol = await message.reply("⚪ **𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐋𝐞𝐚𝐯𝐢𝐧𝐠 𝐀𝐥𝐥 𝐂𝐡𝐚𝐭𝐬 !")
     async for dialog in USER.iter_dialogs():
         try:
             await USER.leave_chat(dialog.chat.id)
             left += 1
             await lol.edit(
-                f"Userbot leaving all group...\n\nLeft: {left} chats.\nFailed: {failed} chats."
+                f"𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐋𝐞𝐚𝐯𝐢𝐧𝐠 𝐀𝐥𝐥 𝐂𝐡𝐚𝐭𝐬...\n\nLeft: {left} chats.\nFailed: {failed} chats."
             )
         except:
             failed += 1
             await lol.edit(
-                f"Userbot leaving...\n\nLeft: {left} chats.\nFailed: {failed} chats."
+                f"𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐋𝐞𝐚𝐯𝐢𝐧𝐠...\n\nLeft: {left} chats.\nFailed: {failed} chats."
             )
         await asyncio.sleep(0.7)
     await client.send_message(
@@ -110,7 +110,7 @@ async def addcchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>• **i'm not have permission:**\n\n» ❌ __Add Users__</b>",
+            "<b>• ** 𝐈 𝐌 𝐍𝐨𝐭 𝐇𝐚𝐯𝐞 𝐏𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧:**\n\n» 🔴__Add Users__</b>",
         )
         return
 
@@ -122,11 +122,11 @@ async def addcchannel(client, message):
     try:
         await USER.join_chat(invitelink)
         await USER.send_message(
-            message.chat.id, "🤖: i'm joined here for playing music on vc"
+            message.chat.id, "⚪: 𝐈'𝐦 𝐉𝐨𝐢𝐧𝐞𝐝 𝐇𝐞𝐚𝐫 𝐅𝐨𝐫 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 𝐌𝐮𝐬𝐢𝐜 𝐎𝐧 𝐕𝐂"
         )
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>✅ userbot already joined channel</b>",
+            "<b>🟢𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐉𝐨𝐢𝐧𝐞𝐝 𝐂𝐡𝐚𝐧𝐧𝐞𝐥</b>",
         )
         return
     except Exception as e:
@@ -137,5 +137,5 @@ async def addcchannel(client, message):
         )
         return
     await message.reply_text(
-        "<b>✅ userbot successfully joined channel</b>",
+        "<b>🟢𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐉𝐨𝐢𝐧𝐞𝐝 𝐂𝐡𝐚𝐧𝐧𝐞𝐥</b>",
     )
