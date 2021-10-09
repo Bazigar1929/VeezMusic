@@ -509,7 +509,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
                     InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("🙋‍♂️ owner", url=f"https://t.me/XD_SOULMATE"),
+                    InlineKeyboardButton("🙋‍♂️ owner", url=f"https://t.me/BazigarYT"),
                     InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
             ]
@@ -557,7 +557,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
                     InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("🙋‍♂️ owner", url=f"https://t.me/XD_SOULMATE"),
+                    InlineKeyboardButton("🙋‍♂️ owner", url=f"https://t.me/BazigarYT"),
                     InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
             ]
@@ -639,7 +639,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
                     InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("🙋‍♂️ owner", url=f"https://t.me/XD_SOULMATE"),
+                    InlineKeyboardButton("🙋‍♂️ owner", url=f"https://t.me/Bazigaryt"),
                     InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
             ]
