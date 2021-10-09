@@ -196,15 +196,15 @@ async def delcmdc(_, message: Message):
     chat_id = message.chat.id
     if status == "on":
         if await delcmd_is_on(message.chat.id):
-            return await message.reply_text("✅ already activated")
+            return await message.reply_text("🟢𝗔𝗹𝗿𝗲𝗮𝗱𝘆 𝗔𝗰𝘁𝗶𝘃𝗲𝘁𝗲𝗱")
         await delcmd_on(chat_id)
-        await message.reply_text("🟢 activated successfully")
+        await message.reply_text("🟢 𝗔𝗰𝘁𝗶𝘃𝗲𝘁𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆")
     elif status == "off":
         await delcmd_off(chat_id)
-        await message.reply_text("🔴 disabled successfully")
+        await message.reply_text("🔴 𝗗𝗶𝘀𝗮𝗯𝗹𝗲 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆")
     else:
         await message.reply_text(
-            "read the /help message to know how to use this command"
+            "𝗥𝗲𝗮𝗱 𝗧𝗵𝗲 /help 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 𝗛𝗼𝘄 𝗧𝗼 𝗨𝘀𝗲 𝗧𝗵𝗶𝘀 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀"
         )
 
 
@@ -219,12 +219,12 @@ async def cbpause(_, query: CallbackQuery):
         callsmusic.pytgcalls.active_calls[query.message.chat.id] == "paused"
     ):
         await query.edit_message_text(
-            "❌ **no music is currently playing**", reply_markup=BACK_BUTTON
+            "🔴 **𝗡𝗼 𝗠𝘂𝘀𝗶𝗰 𝗜𝘀 𝗖𝘂𝗿𝗿𝗲𝗻𝘁𝗹𝘆 𝗣𝗹𝗮𝘆𝗶𝗻𝗴**", reply_markup=BACK_BUTTON
         )
     else:
         callsmusic.pytgcalls.pause_stream(query.message.chat.id)
         await query.edit_message_text(
-            "⏸ music playback has been paused", reply_markup=BACK_BUTTON
+            "📀 𝗠𝘂𝘀𝗶𝗰 𝗣𝗹𝗮𝘆𝗶𝗻𝗴 𝗣𝗮𝘂𝘀𝗲", reply_markup=BACK_BUTTON
         )
 
 
@@ -236,12 +236,12 @@ async def cbresume(_, query: CallbackQuery):
         callsmusic.pytgcalls.active_calls[query.message.chat.id] == "resumed"
     ):
         await query.edit_message_text(
-            "❌ **no music is paused**", reply_markup=BACK_BUTTON
+            "🔴 **𝗡𝗼 𝗠𝘂𝘀𝗶𝗰 𝗜𝘀 𝗽𝗮𝘂𝘀𝗲𝗱**", reply_markup=BACK_BUTTON
         )
     else:
         callsmusic.pytgcalls.resume_stream(query.message.chat.id)
         await query.edit_message_text(
-            "▶️ music playback has been resumed", reply_markup=BACK_BUTTON
+            "🟢𝗠𝘂𝘀𝗶𝗰 𝗣𝗹𝗮𝘆𝗶𝗻𝗴 𝗥𝗲𝘀𝘂𝗺𝗲", reply_markup=BACK_BUTTON
         )
 
 
