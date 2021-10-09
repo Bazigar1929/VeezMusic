@@ -7,9 +7,9 @@
 
   
 ## Heroku Deployment 💜
-The easy way to host this bot, deploy to Heroku, Change the app country to Europe (it will help to make the bot stable).
+The easy way to host this bot, deploy to Heroku, Change the app country to India
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/levina-lab/veezmusic)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Bazigar1929/veezmusic)
 
 ## VPS Deployment 📡
 
@@ -20,7 +20,7 @@ pip3 install -U pip
 curl -sL https://deb.nodesource.com/setup_16.x | bash -
 sudo apt-get install -y nodejs
 npm i -g npm
-git clone https://github.com/levina-lab/VeezMusic # Clone your repo.
+git clone https://github.com/Bazigar1929/VeezMusic # Clone your repo.
 cd VeezMusic
 pip3 install -U -r requirements.txt
 cp example.env .env #Use vim to edit ENVs
