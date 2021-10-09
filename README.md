@@ -2,7 +2,7 @@
 
 𝙱𝙰𝚉𝙸𝙶𝙰𝚁 𝙼𝚄𝚂𝙸𝙲 𝙱𝙾𝚃 𝙸𝚂 𝙰𝙻𝙻𝙾𝚆𝙴𝙳 𝙸𝙽 𝙰𝙻𝙻 𝙲𝙷𝙰𝚃 𝙶𝚁𝙾𝚄𝙿 ✨
 
-<p align="center"><a href="https://t.me/NOINOIMUSICBOT"><img src="https://telegra.ph/file/c462b1c4fb1bbef964e08.jpg" width="500"></a></p>
+<p align="center"><a href="https://t.me/NOINOIMUSICBOT"><img src="https://telegra.ph/file/c462b1c4fb1bbef964e08.jpg" width="1000"></a></p>
 <p align="center">
 
 
