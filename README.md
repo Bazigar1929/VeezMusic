@@ -5,7 +5,11 @@
 <p align="center"><a href="https://t.me/NOINOIMUSICBOT"><img src="https://telegra.ph/file/c462b1c4fb1bbef964e08.jpg" width="1000"></a></p>
 <p align="center">
 
+  
+## Heroku Deployment 💜
+The easy way to host this bot, deploy to Heroku, Change the app country to Europe (it will help to make the bot stable).
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/levina-lab/veezmusic)
 
 ## VPS Deployment 📡
 
