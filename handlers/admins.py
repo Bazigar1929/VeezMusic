@@ -48,7 +48,7 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ Bot **reloaded correctly !**\n✅ **Admin list** has been **updated !**"
+        "🟢 Bot **𝗕𝗢𝗧 𝗥𝗘𝗟𝗢𝗔𝗗𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗙𝗨𝗟𝗟𝗬!**\n🟢 **𝗔𝗗𝗠𝗜𝗡 𝗟𝗜𝗦𝗧** 𝗛𝗔𝗦 𝗕𝗘𝗘𝗡 **𝗨𝗣𝗗𝗔𝗧𝗘𝗗 !**"
     )
 
 
@@ -58,19 +58,19 @@ async def update_admin(client, message):
 @authorized_users_only
 async def controlset(_, message: Message):
     await message.reply_text(
-        "💡 **here is the control menu of bot :**",
+        "🟡 **𝗛𝗘𝗔𝗥 𝗜𝗦 𝗧𝗛𝗘 𝗖𝗢𝗡𝗧𝗥𝗢𝗟 𝗠𝗘𝗡𝗨**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏸ pause", callback_data="cbpause"),
-                    InlineKeyboardButton("▶️ resume", callback_data="cbresume"),
+                    InlineKeyboardButton("⏸ 𝗣𝗔𝗨𝗦𝗘", callback_data="cbpause"),
+                    InlineKeyboardButton("▶️ 𝗥𝗘𝗦𝗨𝗠𝗘", callback_data="cbresume"),
                 ],
                 [
-                    InlineKeyboardButton("⏩ skip", callback_data="cbskip"),
-                    InlineKeyboardButton("⏹ stop", callback_data="cbend"),
+                    InlineKeyboardButton("⏩ 𝗦𝗞𝗜𝗣", callback_data="cbskip"),
+                    InlineKeyboardButton("⏹ 𝗦𝗧𝗢𝗣", callback_data="cbend"),
                 ],
-                [InlineKeyboardButton("⛔ anti cmd", callback_data="cbdelcmds")],
-                [InlineKeyboardButton("🗑 Close", callback_data="close")],
+                [InlineKeyboardButton("⛔ 𝗔𝗡𝗧𝗜 𝗖𝗠𝗗", callback_data="cbdelcmds")],
+                [InlineKeyboardButton("🗑 𝗖𝗟𝗢𝗦𝗘", callback_data="close")],
             ]
         ),
     )
@@ -84,11 +84,11 @@ async def pause(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "paused"
     ):
-        await message.reply_text("❌ **no music is currently playing**")
+        await message.reply_text("🔴 **𝗡𝗼 𝗠𝘂𝘀𝗶𝗰 𝗜𝘀 𝗖𝘂𝗿𝗿𝗲𝗻𝘁𝗹𝘆 𝗣𝗹𝗮𝘆𝗶𝗻𝗴**")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
         await message.reply_text(
-            "⏸ **Track paused.**\n\n• **To resume the playback, use the**\n» `/resume` command."
+            "⏸ **𝗧𝗿𝗮𝗰𝗸𝗲𝗱 𝗣𝗮𝘂𝘀𝗲.**\n\n• **𝗧𝗼 𝗥𝗲𝘀𝘂𝗺𝗲 𝗧𝗵𝗲 𝗣𝗹𝗮𝘆𝗯𝗮𝗰𝗸, 𝗨𝘀𝗲 𝗧𝗵𝗲**\n» `/resume` 𝗖𝗼𝗺𝗺𝗮𝗻𝗱."
         )
 
 
@@ -100,11 +100,11 @@ async def resume(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
     ):
-        await message.reply_text("❌ **no music is paused**")
+        await message.reply_text("🔴 **𝗡𝗼 𝗠𝘂𝘀𝗶𝗰 𝗜𝘀 𝗣𝗮𝘂𝘀𝗲𝗱**")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
         await message.reply_text(
-            "▶️ **Track resumed.**\n\n• **To pause the playback, use the**\n» `/pause` command."
+            "▶️ **Track resumed.**\n\n• **𝗧𝗼 𝗣𝗮𝘂𝘀𝗲 𝗧𝗵𝗲 𝗣𝗹𝗮𝘆𝗯𝗮𝗰𝗸 𝗨𝘀𝗲 𝗧𝗵𝗲**\n» `/pause` 𝗖𝗼𝗺𝗺𝗮𝗻𝗱."
         )
 
 
@@ -114,7 +114,7 @@ async def resume(_, message: Message):
 async def stop(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❌ **no music is currently playing**")
+        await message.reply_text("🔴 **𝗡𝗼 𝗠𝘂𝘀𝗶𝗰 𝗖𝘂𝗿𝗿𝗲𝗻𝘁𝗹𝘆 𝗣𝗹𝗮𝘆𝗶𝗻𝗴**")
     else:
         try:
             queues.clear(chat_id)
@@ -122,7 +122,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("✅ **music playback has ended**")
+        await message.reply_text("🟢 **𝗠𝘂𝘀𝗶𝗰 𝗣𝗹𝗮𝘆𝗯𝗮𝗰𝗸 𝗛𝗮𝘀 𝗘𝗻𝗱𝗲𝗱**")
 
 
 @Client.on_message(command(["skip", f"skip@{BOT_USERNAME}"]) & other_filters)
@@ -132,7 +132,7 @@ async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❌ **no music is currently playing**")
+        await message.reply_text("🔴 **𝗡𝗼 𝗠𝘂𝘀𝗶𝗰 𝗜𝘀 𝗖𝘂𝗿𝗿𝗲𝗻𝘁𝗹𝘆 𝗣𝗹𝗮𝘆𝗶𝗻𝗴**")
     else:
         queues.task_done(chat_id)
 
@@ -146,7 +146,7 @@ async def skip(_, message: Message):
         qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text("⏭ **You've skipped to the next song.**")
+    await message.reply_text("⏭✨ **𝗬𝗼𝘂 𝗛𝗮𝘃𝗲 𝗦𝗹𝗶𝗽𝗽𝗲𝗱 𝗧𝗼 𝗦𝗼𝗻𝗴.**")
 
 
 @Client.on_message(command(["auth", f"auth@{BOT_USERNAME}"]) & other_filters)
@@ -154,16 +154,16 @@ async def skip(_, message: Message):
 async def authenticate(client, message):
     global admins
     if not message.reply_to_message:
-        return await message.reply("💡 reply to message to authorize user !")
+        return await message.reply("💡 𝗥𝗲𝗽𝗹𝘆 𝗧𝗼 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 𝗧𝗼 𝗔𝗹𝗹𝗼𝘄 𝗨𝘀𝗲𝗿 !")
     if message.reply_to_message.from_user.id not in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
         new_admins.append(message.reply_to_message.from_user.id)
         admins[message.chat.id] = new_admins
         await message.reply(
-            "🟢 user authorized.\n\nfrom now on, that's user can use the admin commands."
+            "🟢 𝗨𝘀𝗲𝗿 𝗔𝗹𝗹𝗼𝘄𝗲𝗱.\n\n𝗢𝗻 𝗡𝗼𝘄 𝗢𝗻 .𝗧𝗵𝗮𝘁 𝗨𝘀𝗲𝗿 𝗖𝗮𝗻 𝗨𝘀𝗲 𝗔𝗱𝗺𝗶𝗻 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀."
         )
     else:
-        await message.reply("✅ user already authorized!")
+        await message.reply("🟢 𝗨𝘀𝗲𝗿 𝗔𝗹𝗿𝗲𝗮𝗱𝘆 𝗔𝗹𝗹𝗼𝘄𝗲𝗱")
 
 
 @Client.on_message(command(["deauth", f"deauth@{BOT_USERNAME}"]) & other_filters)
@@ -171,16 +171,16 @@ async def authenticate(client, message):
 async def deautenticate(client, message):
     global admins
     if not message.reply_to_message:
-        return await message.reply("💡 reply to message to deauthorize user !")
+        return await message.reply("🔴 𝗥𝗲𝗽𝗹𝘆 𝗧𝗼 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 𝗧𝗼 𝗗𝗲𝗻𝗻𝘆!")
     if message.reply_to_message.from_user.id in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
         new_admins.remove(message.reply_to_message.from_user.id)
         admins[message.chat.id] = new_admins
         await message.reply(
-            "🔴 user deauthorized.\n\nfrom now that's user can't use the admin commands."
+            "🔴 𝗨𝘀𝗲𝗿 𝗗𝗲𝗻𝗻𝘆.\n\n𝗧𝗵𝗮𝘁 𝗨𝘀𝗲𝗿 𝗖𝗮𝗻'𝘁 𝗨𝘀𝗲 𝗢𝘄𝗻𝗲𝗿 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀"
         )
     else:
-        await message.reply("✅ user already deauthorized!")
+        await message.reply("🔴 𝗨𝘀𝗲𝗿 𝗔𝗹𝘄𝗮𝘀 𝗗𝗲𝗻𝗻𝘆!")
 
 
 # this is a anti cmd feature
@@ -189,7 +189,7 @@ async def deautenticate(client, message):
 async def delcmdc(_, message: Message):
     if len(message.command) != 2:
         return await message.reply_text(
-            "read the /help message to know how to use this command"
+            "𝗥𝗼𝗮𝗱 𝗧𝗵𝗲/help 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 𝗧𝗼 𝗞𝗻𝗼𝘄 𝗛𝗼𝘄 𝗧𝗼 𝗨𝘀𝗲 𝗧𝗵𝗶𝘀 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀"
         )
     status = message.text.split(None, 1)[1].strip()
     status = status.lower()
