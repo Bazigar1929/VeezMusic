@@ -24,7 +24,7 @@ async def handle_user_status(bot, cmd):
         await db.add_user(chat_id)
         await bot.send_message(
             LOG_CHANNEL,
-            f"**📣 bot notification.** \n\n#NEW_USER **start use your bot!** \n\n🏷 name: `{cmd.from_user.first_name}` \n📮 user id: `{cmd.from_user.id}` \n🧝🏻‍♂️ profile: [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id})",
+            f"**🎶 Bazigar Music Fire.** \n\n@BazigarYT **Start Music Bot!** \n\n🟡 name: `{cmd.from_user.first_name}` \n🔴 user id: `{cmd.from_user.id}` \n🟢 profile: [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id})",
         )
 
     ban_status = await db.get_ban_status(chat_id)
