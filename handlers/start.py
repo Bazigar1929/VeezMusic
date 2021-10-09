@@ -82,7 +82,7 @@ async def start(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        f"""🟢 **𝐁𝐚𝐳𝐢𝐠𝐚𝐫 𝐈𝐬 𝐋𝐢𝐯𝐞**\n<b>💠 *𝐔𝐩𝐭𝐢𝐦𝐞*:**</b> `{uptime}`""",
+        f"""🟢 **𝗕𝗔𝗭𝗜𝗚𝗔𝗥 𝗜𝗦 𝗟𝗜𝗩𝗘**\n<b>💠 *𝗨𝗣𝗧𝗜𝗠𝗘*:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
