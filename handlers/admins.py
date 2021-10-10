@@ -251,7 +251,7 @@ async def cbend(_, query: CallbackQuery):
     get_chat_id(query.message.chat)
     if query.message.chat.id not in callsmusic.pytgcalls.active_calls:
         await query.edit_message_text(
-            "❌ **no music is currently playing**", reply_markup=BACK_BUTTON
+            "🔴 **𝗡𝗼 𝗠𝘂𝘀𝗶𝗰 𝗜𝘀 𝗖𝘂𝗿𝗿𝗲𝗻𝘁𝗹𝘆 𝗣𝗹𝗮𝘆𝗶𝗻𝗴**", reply_markup=BACK_BUTTON
         )
     else:
         try:
@@ -261,7 +261,7 @@ async def cbend(_, query: CallbackQuery):
 
         callsmusic.pytgcalls.leave_group_call(query.message.chat.id)
         await query.edit_message_text(
-            "✅ the music queue has been cleared and successfully left voice chat",
+            "🟢 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𝗦𝘂𝗰𝗰𝗲𝘀𝗳𝘂𝗹𝗹𝘆 𝗟𝗲𝗳𝘁 𝗩𝗼𝗶𝗰𝗲 𝗖𝗵𝗮𝘁",
             reply_markup=BACK_BUTTON,
         )
 
@@ -273,7 +273,7 @@ async def cbskip(_, query: CallbackQuery):
     chat_id = get_chat_id(query.message.chat)
     if query.message.chat.id not in callsmusic.pytgcalls.active_calls:
         await query.edit_message_text(
-            "❌ **no music is currently playing**", reply_markup=BACK_BUTTON
+            "🔴 **𝗡𝗼 𝗠𝘂𝘀𝗶𝗰 𝗖𝘂𝗿𝗿𝗲𝗻𝘁𝗹𝘆 𝗣𝗹𝗮𝘆𝗶𝗻𝗴**", reply_markup=BACK_BUTTON
         )
     else:
         queues.task_done(query.message.chat.id)
@@ -291,5 +291,5 @@ async def cbskip(_, query: CallbackQuery):
     if not qeue:
         return
     await query.edit_message_text(
-        "⏭ **You've skipped to the next song**", reply_markup=BACK_BUTTON
+        "📀 **𝗬𝗼𝘂 𝗛𝗮𝘃𝗲 𝗦𝗸𝗶𝗽𝗽𝗲𝗱 𝗧𝗵𝗲 𝗦𝗼𝗻𝗴**", reply_markup=BACK_BUTTON
     )
