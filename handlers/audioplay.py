@@ -25,16 +25,16 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 @Client.on_message(command(["stream", f"stream@{BOT_USERNAME}"]) & other_filters)
 async def stream(_, message: Message):
     costumer = message.from_user.mention
-    lel = await message.reply_text("🔁 **processing** sound...")
+    lel = await message.reply_text("🔁 **𝗙𝗶𝗻𝗱𝗶𝗻𝗴** sound...")
 
     keyboard = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text="✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
+                    text="✨ 𝗦𝗨𝗣𝗣𝗢𝗥𝗧", url=f"https://t.me/{GROUP_SUPPORT}"
                 ),
                 InlineKeyboardButton(
-                    text="🌻 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    text="🌻 𝗨𝗣𝗗𝗔𝗧𝗘", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
@@ -42,10 +42,10 @@ async def stream(_, message: Message):
 
     audio = message.reply_to_message.audio if message.reply_to_message else None
     if not audio:
-        return await lel.edit("💭 **please reply to a telegram audio file**")
+        return await lel.edit("💭 **𝗣𝗹𝗲𝗮𝘀𝗲 𝗥𝗲𝗽𝗹𝘆 𝗧𝗼 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗔𝘂𝗱𝗶𝗼 𝗙𝗶𝗹𝗲**")
     if round(audio.duration / 60) > DURATION_LIMIT:
         return await lel.edit(
-            f"❌ **music with duration more than** `{DURATION_LIMIT}` **minutes, can't play !**"
+            f"🔴 **music with duration more than** `{DURATION_LIMIT}` **minutes, can't play !**"
         )
 
     # tede_ganteng = True
