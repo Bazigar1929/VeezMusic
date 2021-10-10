@@ -259,9 +259,9 @@ async def cbdelcmds(_, query: CallbackQuery):
  2️⃣ to turn off feature:
      » type `/delcmd off`
       
-⚡ __Powered by {BOT_NAME} A.I__""",
+⚡ __𝗣𝗢𝗪𝗘𝗥𝗗 𝗕𝗬 [𝗖𝗙𝗖 𝗕𝗢𝗧𝗦](https://t.me/CFC_BOT_SUPPORT)__"",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🏡 Go Back", callback_data="cbback")]]
+            [[InlineKeyboardButton("✨BACK✨", callback_data="cbback")]]
         ),
     )
 
@@ -269,23 +269,23 @@ async def cbdelcmds(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbcmds"))
 async def cbhelps(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>💡 Hello there, welcome to the help menu !</b>
+        f"""<b>𝙷𝙴𝙻𝙻𝙾 𝙳𝙴𝙰𝚁 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙷𝙴𝙻𝙿 𝙼𝙴𝙽𝚄 !</b>
 
-» **in this menu you can open several available command menus, in each command menu there is also a brief explanation of each command**
+» **𝙵𝙾𝚁 𝙰𝙽𝚈 𝚀𝚄𝙴𝚁𝚈 𝚈𝙾𝚄 𝙰𝚂𝙺 𝚃𝙾 𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 @BAZIGARYT 𝙾𝚁 𝙾𝚄𝚁 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 @CFC_BOT_SUPPORT ✨🎶**
 
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📚 Basic Cmd", callback_data="cbbasic"),
-                    InlineKeyboardButton("📕 Advanced Cmd", callback_data="cbadvanced"),
+                    InlineKeyboardButton("✨𝙱𝙰𝚂𝙸𝙲✨", callback_data="cbbasic"),
+                    InlineKeyboardButton("✨𝙰𝙳𝚅𝙰𝙽𝙲𝙴✨", callback_data="cbadvanced"),
                 ],
                 [
-                    InlineKeyboardButton("📘 Admin Cmd", callback_data="cbadmin"),
-                    InlineKeyboardButton("📗 Sudo Cmd", callback_data="cbsudo"),
+                    InlineKeyboardButton("✨𝙰𝙳𝙼𝙸𝙽✨", callback_data="cbadmin"),
+                    InlineKeyboardButton("✨𝚂𝚄𝙳𝙾✨", callback_data="cbsudo"),
                 ],
-                [InlineKeyboardButton("📙 Owner Cmd", callback_data="cbowner")],
-                [InlineKeyboardButton("🏡 Go Back", callback_data="cbstart")],
+                [InlineKeyboardButton("✨𝙾𝚆𝙽𝙴𝚁✨", callback_data="cbowner")],
+                [InlineKeyboardButton("✨𝙱𝙰𝙲𝙺✨", callback_data="cbstart")],
             ]
         ),
     )
@@ -294,15 +294,15 @@ async def cbhelps(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbhowtouse"))
 async def cbguides(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""❓ HOW TO USE THIS BOT:
+        f"""❓ 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙾𝚄𝚁 𝙼𝚄𝚂𝙸𝙲 𝙱𝙾𝚃𝚂✨🎶:
 
-1.) first, add me to your group.
-2.) then promote me as admin and give all permissions except anonymous admin.
-3.) add @{ASSISTANT_NAME} to your group or type /userbotjoin to invite her.
-4.) turn on the voice chat first before start to play music.
+1.) 𝙵𝙸𝚁𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿.
+2.) 𝚃𝙷𝙴𝙽 𝙿𝚁𝙾𝙼𝙾𝚃𝙴 𝙼𝙴 𝙸𝙽 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝚆𝙸𝚃𝙷𝙾𝚄𝚃 𝙻𝙰𝚂𝚃 𝙿𝙴𝚁𝙼𝙸𝚂𝚂𝙸𝙾𝙽.
+3.) 𝙰𝙳𝙳 @{ASSISTANT_NAME} 𝚃𝙾 𝚃𝚈𝙿𝙴 /PLAY OR /USERBOTJOIN 𝙸𝙽 𝙶𝚁𝙾𝚄𝙿.
+4.) 𝚃𝚄𝚁𝙽 𝙾𝙽 𝚅𝙾𝙸𝙲𝙴 𝙲𝙷𝙰𝚃 𝙱𝙴𝙵𝙾𝚁𝙴 𝚂𝚃𝙰𝚁𝚃 𝙼𝚄𝚂𝙸𝙲 𝙾𝚁 🎵.
 
-⚡ __Powered by {BOT_NAME} A.I__""",
+⚡ __𝗣𝗢𝗪𝗘𝗥𝗗 𝗕𝗬 [𝗖𝗙𝗖 𝗕𝗢𝗧𝗦](https://t.me/CFC_BOT_SUPPORT)__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🏡 Go Back", callback_data="cbstart")]]
+            [[InlineKeyboardButton("✨𝙱𝙰𝙲𝙺✨", callback_data="cbstart")]]
         ),
     )
