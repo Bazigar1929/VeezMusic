@@ -73,7 +73,7 @@ async def start(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        f"""🟢 **𝙱𝙾𝚃 𝙸𝚂 𝚆𝙾𝚁𝙺𝙸𝙽𝙶**\n<b>💠 **𝚄𝙿𝚃𝙸𝙼𝙴:**</b> `{uptime}`""",
+        f"""🟢 **𝗡𝗢𝗜𝗡𝗢𝗜 𝗜𝗦 𝗟𝗜𝗩𝗘**\n<b>💠 **𝗨𝗣𝗧𝗜𝗠𝗘:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
