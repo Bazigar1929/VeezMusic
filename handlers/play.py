@@ -527,7 +527,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/f343a62840adf2a558959.jpg"
+        thumb_name = "https://telegra.ph/file/f5652cf748e9f27875bf7.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         message.from_user.first_name
