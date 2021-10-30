@@ -30,39 +30,7 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@Client.on_message(
-    command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
-)
-async def start_(client: Client, message: Message):
-    await message.reply_text(
-        f"""<b>🙋‍♂️ **𝗪𝗲𝗹𝗰𝗼𝗺𝗲 {message.from_user.first_name}** \n
-💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 𝗔𝗹𝗹𝗼𝘄𝘀 𝗬𝗼𝘂 𝗧𝗼 𝗣𝗹𝗮𝘆 𝗠𝘂𝘀𝗶𝗰 𝗢𝗻 𝗚𝗿𝗼𝘂𝗽𝘀 𝗧𝗵𝗿𝗼𝘂𝗴𝗵 𝗧𝗵𝗲 𝗡𝗲𝘄 𝘁𝗲𝗹𝗲𝗴𝗿𝗮𝗺'𝘀 𝘃𝗼𝗶𝗰𝗲 𝗰𝗵𝗮𝘁𝘀!**
 
-💡 **𝗳𝗶𝗻𝗱 𝗼𝘂𝘁 𝗮𝗹𝗹 𝘁𝗵𝗲 𝗯𝗼𝘁'𝘀 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝗮𝗻𝗱 𝗵𝗼𝘄 𝘁𝗵𝗲𝘆 𝘄𝗼𝗿𝗸 𝗯𝘆 𝗰𝗹𝗶𝗰𝗸𝗶𝗻𝗴 𝗼𝗻 𝘁𝗵𝗲 » 📚 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝗯𝘂𝘁𝘁𝗼𝗻!**
-
-❔ **𝘁𝗼 𝗸𝗻𝗼𝘄 𝗵𝗼𝘄 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁, 𝗽𝗹𝗲𝗮𝘀𝗲 𝗰𝗹𝗶𝗰𝗸 𝗼𝗻 𝘁𝗵𝗲 » ❓ 𝗯𝗮𝘀𝗶𝗰 𝗴𝘂𝗶𝗱𝗲 𝗯𝘂𝘁𝘁𝗼𝗻!**
-</b>""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂", callback_data="cbcmds"),
-                    InlineKeyboardButton(
-                        "𝙰𝙳𝙳 𝙼𝙴 𝙸𝙽 𝙶𝚁𝙾𝚄𝙿",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "𝚂𝚄𝙿𝙿𝙾𝚁𝚃", url=f"https://t.me/{GROUP_SUPPORT}"
-                    ),
-                    InlineKeyboardButton(
-                        "𝚄𝙿𝙳𝙰𝚃𝙴𝚂", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    )
-                ],
-            ]
-        ),
-        disable_web_page_preview=True,
-    )
 
 
 @Client.on_message(
